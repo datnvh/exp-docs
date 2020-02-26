@@ -3,12 +3,12 @@
 
 ## Location
 
-/Users/`<username>`/Library/Preferences/XamarinStudio-`[version#]`/__`MonoDevelopProperties.xml`__
+[/Users/{username}/Library/Preferences/XamarinStudio-{version#}/__MonoDevelopProperties.xml__](/Users/<username>/Library/Preferences/XamarinStudio-<version#]>/MonoDevelopProperties.xml)
 
 > `Library` folder may be hidden.  
 > Use `Command + Shift + .` to toggle show/hide files
 
-## MonoDevelopProperties.xml Structure
+## Structure
 
 ```xml
 <MonoDevelopProperties version="2.0">
@@ -20,7 +20,7 @@
 </MonoDevelopProperties>
 ```
 
-## Reset settings
+## Reset
 
 Leave `MonoDevelopProperties` empty to reset _Visual Studio Mac_ settings
 
