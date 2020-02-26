@@ -1,5 +1,4 @@
 # Backup, Restore Visual Studio Mac preference
-## Table of Content
 
 ## Location
 
