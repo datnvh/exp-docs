@@ -2,7 +2,7 @@
 
 ## Location
 
-[/Users/{username}/Library/Preferences/XamarinStudio-{version#}/__MonoDevelopProperties.xml__](/Users/<username>/Library/Preferences/XamarinStudio-<version#]>/MonoDevelopProperties.xml)
+[/Users/{username}/Library/Preferences/VisualStudio-{version#}/__MonoDevelopProperties.xml__](/Users/<username>/Library/Preferences/VisualStudio-<version#]>/MonoDevelopProperties.xml)
 
 > `Library` folder may be hidden.  
 > Use `Command + Shift + .` to toggle show/hide files
