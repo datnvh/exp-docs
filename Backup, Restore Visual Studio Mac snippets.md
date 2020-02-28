@@ -53,14 +53,19 @@ __Function__|we can apply built-in functions like GetSimpleTypeName("System#Cons
 ```
 
 ## Predefined custom snippets
+
 There are some predefined snippet locating at [snippets/csharp](snippets/csharp) which you can make use.
 You can see snippet details [__here__](snippets/csharp/snippet-details.md).
 
 ## Usage
+
+- Copy `xml` files into `~/Library/VisualStudio⁩/{version}/Snippets/{shortcut}.template.xml` directory
+- Close and re-open Visual Studio Mac
 - Type shortcut (example: `cmt`)
 - Press `Tab`, `Tab` (tab 2 times)
 
 ## Contribution
+
 You are more than welcome to contribute your favorite code snippets.
 Please follow these steps:
 
