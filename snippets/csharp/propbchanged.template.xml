@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeTemplates version="3.0">
+  <CodeTemplate version="2.0">
+    <Header>
+      <_Group>C#</_Group>
+      <Version />
+      <MimeType>text/x-csharp</MimeType>
+      <Shortcut>propbchanged</Shortcut>
+      <_Description>create bindable property with propertychanged</_Description>
+      <TemplateType>Expansion</TemplateType>
+    </Header>
+    <Variables>
+      <Variable name="name">
+        <Default>name</Default>
+      </Variable>
+      <Variable name="type">
+        <Default>string</Default>
+      </Variable>
+      <Variable name="classname" isEditable="false">
+        <Function>GetCurrentClassName()</Function>
+      </Variable>
+      <Variable name="mode" isEditable="false">
+        <Default>BindingMode.OneWay</Default>
+      </Variable>
+      <Variable name="classname1" isEditable="false">
+        <Function>GetCurrentClassName()</Function>
+      </Variable>
+    </Variables>
+    <Code><![CDATA[#region $name$
+public static BindableProperty $name$Property = BindableProperty.Create(nameof($name$), typeof($type$), typeof($classname$), default($type$), $mode$, propertyChanged: $name$Changed);
+private static void $name$Changed(BindableObject bindable, object oldValueObject, object newValueObject)
+{
+    var @this = ($classname1$)bindable;
+    var oldValue = ($type$)oldValueObject;
+    var newValue = ($type$)newValueObject;
+}
+public $type$ $name$
+{
+  get { return ($type$)GetValue($name$Property); }
+  set { SetValue($name$Property, value); }
+}
+#endregion]]></Code>
+  </CodeTemplate>
+</CodeTemplates>

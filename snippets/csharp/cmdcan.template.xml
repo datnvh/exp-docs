@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeTemplates version="3.0">
+  <CodeTemplate version="2.0">
+    <Header>
+      <_Group>C#</_Group>
+      <Version />
+      <MimeType>text/x-csharp</MimeType>
+      <Shortcut>cmdcan</Shortcut>
+      <_Description>create a prism delegate command with canexecute</_Description>
+      <TemplateType>Expansion</TemplateType>
+    </Header>
+    <Variables>
+      <Variable name="name">
+        <Default>name</Default>
+      </Variable>
+    </Variables>
+    <Code><![CDATA[#region $name$Command
+private DelegateCommand _$name$Command;
+public DelegateCommand $name$Command => _$name$Command ?? (_$name$Command = new DelegateCommand(
+    executeMethod: async () =>
+    {
+        if (IsBusy) return;
+        IsBusy = true;
+        IsBusy = false;
+    },
+    canExecuteMethod: () =>
+    {
+        return !IsBusy;
+    })
+    .ObservesProperty(() => IsBusy));
+#endregion]]></Code>
+  </CodeTemplate>
+</CodeTemplates>

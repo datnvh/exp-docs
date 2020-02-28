@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeTemplates version="3.0">
+  <CodeTemplate version="2.0">
+    <Header>
+      <_Group>C#</_Group>
+      <Version />
+      <MimeType>text/x-csharp</MimeType>
+      <Shortcut>propv</Shortcut>
+      <_Description>create a validatable object property</_Description>
+      <TemplateType>Expansion</TemplateType>
+    </Header>
+    <Variables>
+      <Variable name="valuetype">
+        <Default>T</Default>
+      </Variable>
+      <Variable name="name">
+        <Default>name</Default>
+      </Variable>
+    </Variables>
+    <Code><![CDATA[public ValidatableObject<$valuetype$> $name$ { get; set; } = new ValidatableObject<$valuetype$>(false);]]></Code>
+  </CodeTemplate>
+</CodeTemplates>

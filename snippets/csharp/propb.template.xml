@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeTemplates version="3.0">
+  <CodeTemplate version="2.0">
+    <Header>
+      <_Group>C#</_Group>
+      <Version />
+      <MimeType>text/x-csharp</MimeType>
+      <Shortcut>propb</Shortcut>
+      <_Description>create a bindable property</_Description>
+      <TemplateType>Expansion</TemplateType>
+    </Header>
+    <Variables>
+      <Variable name="some">
+        <Default>some</Default>
+      </Variable>
+      <Variable name="type">
+        <Default>string</Default>
+      </Variable>
+      <Variable name="classname" isEditable="false">
+        <Function>GetCurrentClassName()</Function>
+      </Variable>
+      <Variable name="mode" isEditable="false">
+        <Default>BindingMode.OneWay</Default>
+      </Variable>
+      <Variable name="name">
+        <Default>name</Default>
+      </Variable>
+    </Variables>
+    <Code><![CDATA[#region $name$
+public static BindableProperty $name$Property = BindableProperty.Create(nameof($name$), typeof($type$), typeof($classname$), default($type$), $mode$);
+public $type$ $name$
+{
+  get { return ($type$) GetValue($name$Property); }
+  set { SetValue($name$Property, value); }
+}
+#endregion]]></Code>
+  </CodeTemplate>
+</CodeTemplates>

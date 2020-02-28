@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeTemplates version="3.0">
+  <CodeTemplate version="2.0">
+    <Header>
+      <_Group>C#</_Group>
+      <Version />
+      <MimeType>text/x-csharp</MimeType>
+      <Shortcut>cmd</Shortcut>
+      <_Description>create a prism delegate command</_Description>
+      <TemplateType>Expansion</TemplateType>
+    </Header>
+    <Variables>
+      <Variable name="name">
+        <Default>name</Default>
+      </Variable>
+      <Variable name="start">
+        <Default>notset</Default>
+      </Variable>
+    </Variables>
+    <Code><![CDATA[#region $name$Command
+private DelegateCommand _$name$Command;
+public DelegateCommand $name$Command => _$name$Command ?? (_$name$Command = new DelegateCommand(async () => 
+{
+    if(IsBusy) return;
+    IsBusy = true;
+    IsBusy = false;
+}));
+#endregion]]></Code>
+  </CodeTemplate>
+</CodeTemplates>
