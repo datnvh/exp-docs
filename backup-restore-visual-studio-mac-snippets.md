@@ -1,5 +1,10 @@
 # Backup, Restore Visual Studio Mac snippets
 
+## Predefined custom snippets
+
+There are some predefined snippet locating at [snippets/csharp](snippets/csharp) which you can make use.
+You can see snippet details [__HERE__](snippets/csharp/snippet-details.md).
+
 ## Create Snippets
 
 Visual Studio for Mac is shipped with a [default code snippets](https://docs.microsoft.com/en-us/visualstudio/ide/visual-csharp-code-snippets?view=vs-2015) that can be used as a great example. The following steps is to create custom snippet.
@@ -51,11 +56,6 @@ __Function__|we can apply built-in functions like GetSimpleTypeName("System#Cons
   </CodeTemplate>
 </CodeTemplates>
 ```
-
-## Predefined custom snippets
-
-There are some predefined snippet locating at [snippets/csharp](snippets/csharp) which you can make use.
-You can see snippet details [__here__](snippets/csharp/snippet-details.md).
 
 ## Usage
 
