@@ -70,5 +70,5 @@ You are more than welcome to contribute your favorite code snippets.
 Please follow these steps:
 
 - Create a snippet using VS for Mac or copy an existing one from `~/Library/VisualStudio⁩/{version}/Snippets` to `snippets/csharp` directory.
-- Update [Backup, Restore Visual Studio Mac snippets.md](backup-restore-visual-studio-mac-snippets.md).
+- Update [Backup, Restore Visual Studio Mac snippets.md](Backup%2C%20Restore%20Visual%20Studio%20Mac%20snippets.md).
 - Create a Pull Request.
