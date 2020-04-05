@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeTemplates version="3.0">
+  <CodeTemplate version="2.0">
+    <Header>
+      <_Group>C#</_Group>
+      <Version />
+      <MimeType>text/x-csharp</MimeType>
+      <Shortcut>propa</Shortcut>
+      <_Description>attached property</_Description>
+      <TemplateType>Unknown</TemplateType>
+    </Header>
+    <Variables>
+      <Variable name="type">
+        <Default>string</Default>
+      </Variable>
+      <Variable name="value">
+        <Default>Value</Default>
+      </Variable>
+      <Variable name="classname" isEditable="false">
+        <Function>GetCurrentClassName()</Function>
+      </Variable>
+    </Variables>
+    <Code><![CDATA[#region $value$
+public static readonly BindableProperty $value$Property = BindableProperty.CreateAttached("$value$", typeof($type$), typeof($classname$), default($type$));
+public static $type$ Get$value$(BindableObject bindable)
+    => ($type$)bindable.GetValue($value$Property);
+public static void Set$value$(BindableObject bindable, $type$ value)
+    => bindable.SetValue($value$Property, value);
+#endregion]]></Code>
+  </CodeTemplate>
+</CodeTemplates>
