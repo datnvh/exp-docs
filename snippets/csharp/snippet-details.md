@@ -124,4 +124,13 @@ public string Name
 ```c#
 public ValidatableObject<T> name { get; set; } = new ValidatableObject<T>(false);
 ```
+## `propa`
 
+```c#
+#region Value
+public static readonly BindableProperty ValueProperty = BindableProperty.CreateAttached("Value", typeof(string), typeof(ClassName), default(string));
+public static string GetValue(BindableObject bindable)
+    => (string)bindable.GetValue(ValueProperty);
+public static void SetValue(BindableObject bindable, string value)
+    => bindable.SetValue(ValueProperty, value);
+#endregion```
