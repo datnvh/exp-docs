@@ -5,12 +5,12 @@
 ```c#
 #region nameCommand
 private DelegateCommand _nameCommand;
-public DelegateCommand nameCommand => _nameCommand ?? (_nameCommand = new DelegateCommand(async () =>
+public DelegateCommand nameCommand => _nameCommand ??= new DelegateCommand(async () =>
 {
     if (IsBusy) return;
     IsBusy = true;
     IsBusy = false;
-}));
+});
 #endregion
 ```
 
@@ -19,7 +19,7 @@ public DelegateCommand nameCommand => _nameCommand ?? (_nameCommand = new Delega
 ```c#
 #region nameCommand
 private DelegateCommand _nameCommand;
-public DelegateCommand nameCommand => _nameCommand ?? (_nameCommand = new DelegateCommand(
+public DelegateCommand nameCommand => _nameCommand ??= new DelegateCommand(
     executeMethod: async () =>
     {
         if (IsBusy) return;
@@ -30,7 +30,7 @@ public DelegateCommand nameCommand => _nameCommand ?? (_nameCommand = new Delega
     {
         return !IsBusy;
     })
-    .ObservesProperty(() => IsBusy));
+    .ObservesProperty(() => IsBusy);
 #endregion
 ```
 
@@ -39,7 +39,7 @@ public DelegateCommand nameCommand => _nameCommand ?? (_nameCommand = new Delega
 ```c#
 #region nameCommand
 private DelegateCommand<object> _nameCommand;
-public DelegateCommand<object> nameCommand => _nameCommand ?? (_nameCommand = new DelegateCommand<object>(
+public DelegateCommand<object> nameCommand => _nameCommand ??= new DelegateCommand<object>(
     executeMethod: async arg =>
     {
         if (IsBusy) return;
@@ -50,7 +50,7 @@ public DelegateCommand<object> nameCommand => _nameCommand ?? (_nameCommand = ne
     {
         return !IsBusy;
     })
-    .ObservesProperty(() => IsBusy));
+    .ObservesProperty(() => IsBusy);
 #endregion
 ```
 
@@ -59,12 +59,12 @@ public DelegateCommand<object> nameCommand => _nameCommand ?? (_nameCommand = ne
 ```c#
 #region nameCommand
 private DelegateCommand<object> _nameCommand;
-public DelegateCommand<object> nameCommand => _nameCommand ?? (_nameCommand = new DelegateCommand<object>(async arg =>
+public DelegateCommand<object> nameCommand => _nameCommand ??= new DelegateCommand<object>(async arg =>
 {
     if (IsBusy) return;
     IsBusy = true;
     IsBusy = false;
-}));
+});
 #endregion
 ```
 
@@ -134,3 +134,10 @@ public static string GetValue(BindableObject bindable)
 public static void SetValue(BindableObject bindable, string value)
     => bindable.SetValue(ValueProperty, value);
 #endregion```
+
+## `propj`
+
+```c#
+[JsonProperty("name")]
+public string Name { get; set; }
+```

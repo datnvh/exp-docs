@@ -11,7 +11,7 @@
     </Header>
     <Variables>
       <Variable name="name">
-        <Default>name</Default>
+        <Default>Name</Default>
       </Variable>
       <Variable name="valuetype">
         <Default>T</Default>
@@ -19,10 +19,13 @@
       <Variable name="type">
         <Default>object</Default>
       </Variable>
+      <Variable name="name1">
+        <Default>name</Default>
+      </Variable>
     </Variables>
     <Code><![CDATA[#region $name$Command
-private DelegateCommand<$type$> _$name$Command;
-public DelegateCommand<$type$> $name$Command => _$name$Command ?? (_$name$Command = new DelegateCommand<$type$>(
+private DelegateCommand<$type$> _$name1$Command;
+public DelegateCommand<$type$> $name$Command => _$name1$Command ??= new DelegateCommand<$type$>(
     executeMethod: async arg =>
     {
         if (IsBusy) return;
@@ -33,7 +36,7 @@ public DelegateCommand<$type$> $name$Command => _$name$Command ?? (_$name$Comman
     {
         return !IsBusy;
     })
-    .ObservesProperty(() => IsBusy));
+    .ObservesProperty(() => IsBusy);
 #endregion]]></Code>
   </CodeTemplate>
 </CodeTemplates>

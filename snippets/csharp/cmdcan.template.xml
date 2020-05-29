@@ -11,12 +11,15 @@
     </Header>
     <Variables>
       <Variable name="name">
+        <Default>Name</Default>
+      </Variable>
+      <Variable name="name1">
         <Default>name</Default>
       </Variable>
     </Variables>
     <Code><![CDATA[#region $name$Command
-private DelegateCommand _$name$Command;
-public DelegateCommand $name$Command => _$name$Command ?? (_$name$Command = new DelegateCommand(
+private DelegateCommand _$name1$Command;
+public DelegateCommand $name$Command => _$name1$Command ??= new DelegateCommand(
     executeMethod: async () =>
     {
         if (IsBusy) return;
@@ -27,7 +30,7 @@ public DelegateCommand $name$Command => _$name$Command ?? (_$name$Command = new 
     {
         return !IsBusy;
     })
-    .ObservesProperty(() => IsBusy));
+    .ObservesProperty(() => IsBusy);
 #endregion]]></Code>
   </CodeTemplate>
 </CodeTemplates>

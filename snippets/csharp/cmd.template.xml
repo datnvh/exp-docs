@@ -11,20 +11,23 @@
     </Header>
     <Variables>
       <Variable name="name">
-        <Default>name</Default>
+        <Default>Name</Default>
       </Variable>
       <Variable name="start">
         <Default>notset</Default>
       </Variable>
+      <Variable name="name1">
+        <Default>name</Default>
+      </Variable>
     </Variables>
     <Code><![CDATA[#region $name$Command
-private DelegateCommand _$name$Command;
-public DelegateCommand $name$Command => _$name$Command ?? (_$name$Command = new DelegateCommand(async () => 
+private DelegateCommand _$name1$Command;
+public DelegateCommand $name$Command => _$name1$Command ??= new DelegateCommand(async () => 
 {
     if(IsBusy) return;
     IsBusy = true;
     IsBusy = false;
-}));
+});
 #endregion]]></Code>
   </CodeTemplate>
 </CodeTemplates>
